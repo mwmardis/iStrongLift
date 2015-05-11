@@ -10,6 +10,7 @@
 #import "Workout.h"
 #import "Log.h"
 #import "ExerciseViewController.h"
+#import "Set.h"
 @implementation WorkoutViewController
 
 
@@ -41,6 +42,21 @@
     UINavigationController *navigationController = self.navigationController;
     [navigationController popViewControllerAnimated:YES];
     
+}
+
+- (void)alertOKCancelAction {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"You didn't complete all exercises" message:@"Are you sure that you want to complete this workout?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"NO", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        UINavigationController *navigationController = self.navigationController;
+        [navigationController popViewControllerAnimated:YES];
+    }
+    else {
+        
+    }
 }
 
 // gives the amount of Exercises that are in a workout program
@@ -135,16 +151,19 @@
     
     if([segue.identifier isEqualToString:@"workouttoexercise"])
     {
+        
+        if (exercise.exerciseCompleted) {
+            [[[UIAlertView alloc] initWithTitle:@"Exercise already completed" message:@"Your previous information will be overwritten if you complete this exercise again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]show];
+        }
         UITabBarController *tabar=segue.destinationViewController;
         ExerciseViewController *vc=[tabar.viewControllers objectAtIndex:0];
         vc.exercise = exercise;
-        
-        //vc.workoutProgram = self.workoutProgram;
-        
-        
+    
     }
     
+    
 }
+    
 
 
 

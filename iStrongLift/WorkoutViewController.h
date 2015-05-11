@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Workout.h"
 
-@interface WorkoutViewController : UITableViewController
+@interface WorkoutViewController : UITableViewController <UIAlertViewDelegate>
 
 @property (strong, nonatomic) Workout *workout;
 

@@ -30,4 +30,5 @@ NSString *PREVIOUS_WORKOUT_COMPLETED = @"previous workout completed";
 NSString *A_PREVIOUS = @"A was previous";
 
 NSString *USER_WEIGHT = @"user weight";
+
 @end

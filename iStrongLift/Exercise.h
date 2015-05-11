@@ -16,9 +16,12 @@
 @property (nonatomic, readwrite) NSInteger targetReps;
 @property (nonatomic, strong) UIImage *picture;
 
+// check to see if the exercise has been completed
+@property (nonatomic, assign) BOOL exerciseCompleted;
+
 
 // An array of the sets that you've completed
-@property (nonatomic, strong)  NSMutableArray *sets;
+@property (nonatomic, retain)  NSMutableArray *sets;
 
 -(id)initWithName:(NSString *)name targetSets:(NSInteger)targetSets targetReps:(NSInteger)targetReps picture:(NSString *)picture;
 

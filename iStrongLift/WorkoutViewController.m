@@ -9,6 +9,7 @@
 #import "WorkoutViewController.h"
 #import "Workout.h"
 #import "ExerciseViewController.h"
+#import "Set.h"
 @implementation WorkoutViewController
 
 
@@ -32,6 +33,7 @@
 
     UINavigationController *navigationController = self.navigationController;
     [navigationController popViewControllerAnimated:YES];
+    
     
 }
 

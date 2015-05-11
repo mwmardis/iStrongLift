@@ -82,6 +82,7 @@
 @property (nonatomic, readwrite) NSInteger realRep5;
 @end
 
+
 @implementation ExerciseViewController
 
 - (NSArray *)repArray
@@ -91,6 +92,38 @@
     }
     return _repArray;
 }
+- (Set *)completedSet1 {
+    if (!_completedSet1) {
+        _completedSet1 = [[Set alloc]init];
+    }
+    return _completedSet1;
+}
+- (Set *)completedSet2 {
+    if (!_completedSet2) {
+        _completedSet2 = [[Set alloc]init];
+    }
+    return _completedSet2;
+}
+- (Set *)completedSet3 {
+    if (!_completedSet3) {
+        _completedSet3 = [[Set alloc]init];
+    }
+    return _completedSet3;
+}
+
+- (Set *)completedSet4 {
+    if (!_completedSet4) {
+        _completedSet4 = [[Set alloc]init];
+    }
+    return _completedSet4;
+}
+- (Set *)completedSet5 {
+    if (!_completedSet5) {
+        _completedSet5 = [[Set alloc]init];
+    }
+    return _completedSet5;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -413,6 +446,47 @@
     }
     // back to workout page.
     UINavigationController *navigationController = self.navigationController;
+    self.exercise.exerciseCompleted = YES;
+    if ([self.exercise.name isEqualToString:deadlift]) {
+        self.completedSet1.weight = self.realWeight1;
+        self.completedSet1.reps = self.realRep1;
+        
+        [self.exercise.sets addObject:self.completedSet1];
+        
+    }
+    if ([self.exercise.name isEqualToString:pullups] || [self.exercise.name isEqualToString:dips]) {
+        self.completedSet1.weight = self.realWeight1;
+        self.completedSet1.reps = self.realRep1;
+        self.completedSet2.weight = self.realWeight2;
+        self.completedSet2.reps = self.realRep2;
+        self.completedSet3.weight = self.realWeight3;
+        self.completedSet3.reps = self.realRep3;
+        
+        [self.exercise.sets addObject:self.completedSet1];
+        [self.exercise.sets addObject:self.completedSet2];
+        [self.exercise.sets addObject:self.completedSet3];
+        
+    }
+    else {
+        self.completedSet1.weight = self.realWeight1;
+        self.completedSet1.reps = self.realRep1;
+        self.completedSet2.weight = self.realWeight2;
+        self.completedSet2.reps = self.realRep2;
+        self.completedSet3.weight = self.realWeight3;
+        self.completedSet3.reps = self.realRep3;
+        self.completedSet4.weight = self.realWeight4;
+        self.completedSet4.reps = self.realRep4;
+        self.completedSet5.weight = self.realWeight5;
+        self.completedSet5.reps = self.realRep5;
+        
+        
+        [self.exercise.sets addObject:self.completedSet1];
+        [self.exercise.sets addObject:self.completedSet2];
+        [self.exercise.sets addObject:self.completedSet3];
+        [self.exercise.sets addObject:self.completedSet4];
+        [self.exercise.sets addObject:self.completedSet5];
+        
+    }
     [navigationController popViewControllerAnimated:YES];
     
 

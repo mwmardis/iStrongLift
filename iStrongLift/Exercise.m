@@ -8,6 +8,7 @@
 
 #import "Exercise.h"
 #import <UIKit/UIKit.h>
+#import "Set.h"
 @implementation Exercise
 
 
@@ -19,6 +20,8 @@
         _targetSets = targetSets;
         _targetReps = targetReps;
         _picture = img;
+        _exerciseCompleted = NO;
+        _sets = [[NSMutableArray alloc]init];
     }
     return self;
 }

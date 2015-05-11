@@ -8,6 +8,7 @@
 
 #import "WorkoutViewController.h"
 #import "Workout.h"
+#import "Log.h"
 #import "ExerciseViewController.h"
 @implementation WorkoutViewController
 
@@ -29,7 +30,14 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:self.workout.name forKey:PREVIOUS_WORKOUT_COMPLETED];
-
+    self.workout.date = [NSDate date];
+    
+    //add new log
+    Log *newLog = [[Log alloc] initWithWorkout:self.workout];
+    NSMutableArray *logs = [[NSMutableArray alloc] initWithArray:[defaults objectForKey:@"logs"]];
+    [logs insertObject:newLog atIndex:0];
+    [defaults setObject:logs forKey:@"logs"];
+    
     UINavigationController *navigationController = self.navigationController;
     [navigationController popViewControllerAnimated:YES];
     

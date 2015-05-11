@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275CCBFA1AFB38BF00C92955 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275CCBF91AFB38BF00C92955 /* TimerViewController.m */; };
+		275CCBFD1AFB3B0C00C92955 /* ExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275CCBFC1AFB3B0C00C92955 /* ExerciseViewController.m */; };
+		275CCC011AFC915300C92955 /* Iphone Sms Original.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 275CCC001AFC915300C92955 /* Iphone Sms Original.mp3 */; };
 		2797CF291AF9B14C000FB1B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF281AF9B14C000FB1B3 /* main.m */; };
 		2797CF2C1AF9B14C000FB1B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF2B1AF9B14C000FB1B3 /* AppDelegate.m */; };
 		2797CF2F1AF9B14C000FB1B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF2E1AF9B14C000FB1B3 /* ViewController.m */; };
@@ -14,6 +17,12 @@
 		2797CF341AF9B14C000FB1B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2797CF331AF9B14C000FB1B3 /* Images.xcassets */; };
 		2797CF371AF9B14C000FB1B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2797CF351AF9B14C000FB1B3 /* LaunchScreen.xib */; };
 		2797CF431AF9B14C000FB1B3 /* iStrongLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF421AF9B14C000FB1B3 /* iStrongLiftTests.m */; };
+		2797CF4E1AF9BFDF000FB1B3 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF4D1AF9BFDF000FB1B3 /* SettingsViewController.m */; };
+		2797CF511AF9C500000FB1B3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF501AF9C500000FB1B3 /* User.m */; };
+		2797CF551AFAA0F0000FB1B3 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF541AFAA0F0000FB1B3 /* Workout.m */; };
+		2797CF581AFAA3C3000FB1B3 /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF571AFAA3C3000FB1B3 /* Exercise.m */; };
+		2797CF5B1AFADE40000FB1B3 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF5A1AFADE40000FB1B3 /* Set.m */; };
+		2797CF5E1AFAE406000FB1B3 /* WorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF5D1AFAE406000FB1B3 /* WorkoutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		275CCBF81AFB38BF00C92955 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		275CCBF91AFB38BF00C92955 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		275CCBFB1AFB3B0C00C92955 /* ExerciseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseViewController.h; sourceTree = "<group>"; };
+		275CCBFC1AFB3B0C00C92955 /* ExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseViewController.m; sourceTree = "<group>"; };
+		275CCC001AFC915300C92955 /* Iphone Sms Original.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Iphone Sms Original.mp3"; sourceTree = "<group>"; };
 		2797CF231AF9B14C000FB1B3 /* iStrongLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iStrongLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2797CF271AF9B14C000FB1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2797CF281AF9B14C000FB1B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +54,18 @@
 		2797CF3C1AF9B14C000FB1B3 /* iStrongLiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iStrongLiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2797CF411AF9B14C000FB1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2797CF421AF9B14C000FB1B3 /* iStrongLiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iStrongLiftTests.m; sourceTree = "<group>"; };
+		2797CF4C1AF9BFDF000FB1B3 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		2797CF4D1AF9BFDF000FB1B3 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		2797CF4F1AF9C500000FB1B3 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2797CF501AF9C500000FB1B3 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2797CF531AFAA0F0000FB1B3 /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
+		2797CF541AFAA0F0000FB1B3 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
+		2797CF561AFAA3C3000FB1B3 /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercise.h; sourceTree = "<group>"; };
+		2797CF571AFAA3C3000FB1B3 /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
+		2797CF591AFADE40000FB1B3 /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Set.h; sourceTree = "<group>"; };
+		2797CF5A1AFADE40000FB1B3 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Set.m; sourceTree = "<group>"; };
+		2797CF5C1AFAE406000FB1B3 /* WorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutViewController.h; sourceTree = "<group>"; };
+		2797CF5D1AFAE406000FB1B3 /* WorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +107,19 @@
 		2797CF251AF9B14C000FB1B3 /* iStrongLift */ = {
 			isa = PBXGroup;
 			children = (
-				2797CF2A1AF9B14C000FB1B3 /* AppDelegate.h */,
-				2797CF2B1AF9B14C000FB1B3 /* AppDelegate.m */,
 				2797CF2D1AF9B14C000FB1B3 /* ViewController.h */,
 				2797CF2E1AF9B14C000FB1B3 /* ViewController.m */,
+				2797CF4C1AF9BFDF000FB1B3 /* SettingsViewController.h */,
+				2797CF4D1AF9BFDF000FB1B3 /* SettingsViewController.m */,
+				2797CF5C1AFAE406000FB1B3 /* WorkoutViewController.h */,
+				2797CF5D1AFAE406000FB1B3 /* WorkoutViewController.m */,
+				275CCBFB1AFB3B0C00C92955 /* ExerciseViewController.h */,
+				275CCBFC1AFB3B0C00C92955 /* ExerciseViewController.m */,
+				275CCBF81AFB38BF00C92955 /* TimerViewController.h */,
+				275CCBF91AFB38BF00C92955 /* TimerViewController.m */,
 				2797CF301AF9B14C000FB1B3 /* Main.storyboard */,
+				275CCC001AFC915300C92955 /* Iphone Sms Original.mp3 */,
+				2797CF521AF9C507000FB1B3 /* Model */,
 				2797CF331AF9B14C000FB1B3 /* Images.xcassets */,
 				2797CF351AF9B14C000FB1B3 /* LaunchScreen.xib */,
 				2797CF261AF9B14C000FB1B3 /* Supporting Files */,
@@ -96,6 +130,8 @@
 		2797CF261AF9B14C000FB1B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2797CF2A1AF9B14C000FB1B3 /* AppDelegate.h */,
+				2797CF2B1AF9B14C000FB1B3 /* AppDelegate.m */,
 				2797CF271AF9B14C000FB1B3 /* Info.plist */,
 				2797CF281AF9B14C000FB1B3 /* main.m */,
 			);
@@ -117,6 +153,21 @@
 				2797CF411AF9B14C000FB1B3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2797CF521AF9C507000FB1B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2797CF561AFAA3C3000FB1B3 /* Exercise.h */,
+				2797CF571AFAA3C3000FB1B3 /* Exercise.m */,
+				2797CF591AFADE40000FB1B3 /* Set.h */,
+				2797CF5A1AFADE40000FB1B3 /* Set.m */,
+				2797CF4F1AF9C500000FB1B3 /* User.h */,
+				2797CF501AF9C500000FB1B3 /* User.m */,
+				2797CF531AFAA0F0000FB1B3 /* Workout.h */,
+				2797CF541AFAA0F0000FB1B3 /* Workout.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275CCC011AFC915300C92955 /* Iphone Sms Original.mp3 in Resources */,
 				2797CF321AF9B14C000FB1B3 /* Main.storyboard in Resources */,
 				2797CF371AF9B14C000FB1B3 /* LaunchScreen.xib in Resources */,
 				2797CF341AF9B14C000FB1B3 /* Images.xcassets in Resources */,
@@ -219,9 +271,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2797CF511AF9C500000FB1B3 /* User.m in Sources */,
 				2797CF2F1AF9B14C000FB1B3 /* ViewController.m in Sources */,
+				275CCBFA1AFB38BF00C92955 /* TimerViewController.m in Sources */,
 				2797CF2C1AF9B14C000FB1B3 /* AppDelegate.m in Sources */,
 				2797CF291AF9B14C000FB1B3 /* main.m in Sources */,
+				2797CF5B1AFADE40000FB1B3 /* Set.m in Sources */,
+				2797CF4E1AF9BFDF000FB1B3 /* SettingsViewController.m in Sources */,
+				2797CF581AFAA3C3000FB1B3 /* Exercise.m in Sources */,
+				2797CF551AFAA0F0000FB1B3 /* Workout.m in Sources */,
+				275CCBFD1AFB3B0C00C92955 /* ExerciseViewController.m in Sources */,
+				2797CF5E1AFAE406000FB1B3 /* WorkoutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +403,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iStrongLift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,9 +415,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iStrongLift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -412,6 +476,7 @@
 				2797CF481AF9B14C000FB1B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2797CF491AF9B14C000FB1B3 /* Build configuration list for PBXNativeTarget "iStrongLiftTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +485,7 @@
 				2797CF4B1AF9B14C000FB1B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

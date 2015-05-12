@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27410A431B01A89100AD9822 /* DetailLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27410A421B01A89100AD9822 /* DetailLogViewController.m */; };
 		275CCBFA1AFB38BF00C92955 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275CCBF91AFB38BF00C92955 /* TimerViewController.m */; };
 		275CCBFD1AFB3B0C00C92955 /* ExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275CCBFC1AFB3B0C00C92955 /* ExerciseViewController.m */; };
 		275CCC011AFC915300C92955 /* Iphone Sms Original.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 275CCC001AFC915300C92955 /* Iphone Sms Original.mp3 */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27410A411B01A89100AD9822 /* DetailLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailLogViewController.h; sourceTree = "<group>"; };
+		27410A421B01A89100AD9822 /* DetailLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailLogViewController.m; sourceTree = "<group>"; };
 		275CCBF81AFB38BF00C92955 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		275CCBF91AFB38BF00C92955 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		275CCBFB1AFB3B0C00C92955 /* ExerciseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseViewController.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				275CCBF91AFB38BF00C92955 /* TimerViewController.m */,
 				3CC8557A1B015D4200BB7448 /* LogViewController.h */,
 				3CC855781B015D3400BB7448 /* LogViewController.m */,
+				27410A411B01A89100AD9822 /* DetailLogViewController.h */,
+				27410A421B01A89100AD9822 /* DetailLogViewController.m */,
 				2797CF301AF9B14C000FB1B3 /* Main.storyboard */,
 				275CCC001AFC915300C92955 /* Iphone Sms Original.mp3 */,
 				2797CF521AF9C507000FB1B3 /* Model */,
@@ -289,6 +294,7 @@
 				2797CF5B1AFADE40000FB1B3 /* Set.m in Sources */,
 				3CC855761B015CBC00BB7448 /* Log.m in Sources */,
 				2797CF4E1AF9BFDF000FB1B3 /* SettingsViewController.m in Sources */,
+				27410A431B01A89100AD9822 /* DetailLogViewController.m in Sources */,
 				2797CF581AFAA3C3000FB1B3 /* Exercise.m in Sources */,
 				2797CF551AFAA0F0000FB1B3 /* Workout.m in Sources */,
 				275CCBFD1AFB3B0C00C92955 /* ExerciseViewController.m in Sources */,

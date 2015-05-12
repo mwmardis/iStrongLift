@@ -86,8 +86,8 @@
 
 - (void) encodeWithCoder : (NSCoder *)coder
 {
-   
-    [coder encodeObject:self.exercises forKey:@"exercises"];
+     [coder encodeObject:self.name forKey:@"name"];
+     [coder encodeObject:self.exercises forKey:@"exercises"];
      [coder encodeObject:self.date forKey:@"date"];
 
 }
@@ -96,6 +96,7 @@
     self = [super init];
     if (self != nil)
     {
+        self.name = [coder decodeObjectForKey:@"name"];
         self.date = [coder decodeObjectForKey:@"date"];
         self.exercises = [coder decodeObjectForKey:@"exercises"];
     }

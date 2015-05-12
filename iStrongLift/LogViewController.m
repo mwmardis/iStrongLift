@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LogViewController.h"
 #import "Workout.h"
+#import "DetailLogViewController.h"
 @interface LogViewController ()
 @property (nonatomic, strong)NSUserDefaults *defaults;
 @property (nonatomic, strong)NSMutableArray *logs;
@@ -34,25 +35,23 @@
     return _defaults;
 }
 
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(void) viewDidLoad
+{
+    self.navigationItem.title = @"History";
+    NSMutableArray *logV= [NSKeyedUnarchiver unarchiveObjectWithData:[self.defaults objectForKey:@"logs"]];
+    self.logs = [[NSMutableArray alloc] initWithArray:logV];
+    //[self printArray: self.logs];
     
-    Workout *currWorkout = [self.logs objectAtIndex:indexPath.row];
+    //  NSSortDescriptor *dateSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
+    
+    //   NSMutableArray *logs = [[NSMutableArray alloc] initWithArray:[self.defaults objectForKey:@"logs"]];
+    //logs = [logs sortedArrayUsingDescriptors:@[dateSortDescriptor]];
+    self.tableView.delegate = self;
     
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MM/dd/yyyy"];
-    NSString *stringFromDate = [formatter stringFromDate: currWorkout.date];
     
-    
-   // NSLog(@"Date : %@", stringFromDate);
-    NSString *CellIdentifier = @"log_cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell.textLabel.text = stringFromDate;
-    return cell;
 }
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -66,10 +65,24 @@
     return self.logs.count;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Workout *currWorkout = [self.logs objectAtIndex:indexPath.row];
     
     
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSString *stringFromDate = [formatter stringFromDate: currWorkout.date];
+    
+    
+    // NSLog(@"Date : %@", stringFromDate);
+    NSString *CellIdentifier = @"log_cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.textLabel.text = currWorkout.name;
+    cell.detailTextLabel.text = stringFromDate;
+    
+    return cell;
 }
 
 
@@ -78,30 +91,24 @@
     [self.tableView reloadData];
     
  
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    Workout *workout = [self.logs objectAtIndex:indexPath.row];
+    
+    if([segue.identifier isEqualToString:@"log_to_detail"])
+    {
+        
+        DetailLogViewController *vc = [segue destinationViewController];
+        vc.workout = workout;
+        
+    }
+    
     
 }
 
--(void) viewDidLoad
-{
-    
-    NSMutableArray *logV= [NSKeyedUnarchiver unarchiveObjectWithData:[self.defaults objectForKey:@"logs"]];
-    self.logs = [[NSMutableArray alloc] initWithArray:logV];
-    //[self printArray: self.logs];
-    
-  //  NSSortDescriptor *dateSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
-    
- //   NSMutableArray *logs = [[NSMutableArray alloc] initWithArray:[self.defaults objectForKey:@"logs"]];
-    //logs = [logs sortedArrayUsingDescriptors:@[dateSortDescriptor]];
-    self.tableView.delegate = self;
-    
 
-    
-}
-
--(void) printArray: (NSMutableArray*) arr
-{
-    for (id obj in arr)
-        NSLog(@"Object: %@", obj);
-}
 
 @end

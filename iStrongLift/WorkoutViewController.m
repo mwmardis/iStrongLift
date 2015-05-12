@@ -60,28 +60,6 @@
         }
     }
     
-   
-    //add new log
-    //Log *newLog = [[Log alloc] initWithWorkout:self.workout];
-   
-    /*
-    NSArray *logV= [NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"logs"]];
-    NSMutableArray *logs = [[NSMutableArray alloc] initWithArray:logV];
-    [logs insertObject:self.workout atIndex:0];
-    
-
-    
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:logs];
-    [defaults setObject:data forKey:@"logs"];
-     */
-
-
-}
-
--(void) printArray: (NSMutableArray*) arr
-{
-    for (id obj in arr)
-        NSLog(@"Object: %@", obj);
 }
 
 - (void)alertOKCancelAction {

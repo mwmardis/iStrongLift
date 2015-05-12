@@ -153,8 +153,15 @@
     NSString *completedExercise = [exerciseName stringByAppendingString:completed];
     
     if (exercise.exerciseCompleted) {
-        cell.textLabel.font = [UIFont systemFontOfSize:17];
-        cell.textLabel.text = completedExercise;
+        if (self.workout.exercises.count == 4) {
+            cell.textLabel.font = [UIFont systemFontOfSize:17];
+            cell.textLabel.text = completedExercise;
+        }
+        else {
+            cell.textLabel.text = exerciseName;
+        }
+        //cell.textLabel.font = [UIFont systemFontOfSize:17];
+        
     }
     else {
         cell.textLabel.text = exerciseName;

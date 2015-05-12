@@ -278,7 +278,7 @@
             self.ex4Set1InfoText.hidden = YES;
             self.ex4Set3InfoText.hidden = YES;
             
-            self.ex4Set2InfoText.hidden = YES;
+            self.ex4Set2InfoText.text = @"Incomplete";
         }
     }
     else {

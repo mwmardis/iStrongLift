@@ -26,6 +26,10 @@
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"Finish" style:UIBarButtonItemStylePlain target:self action:@selector(finish:)];
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [self.tableView reloadData];
+}
+
 -(void)finish:(UIBarButtonItem *)sender{
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -53,7 +57,7 @@
 }
 
 - (void)alertOKCancelAction {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"You didn't complete all exercises" message:@"Are you sure that you want to complete this workout?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"NO", nil];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"You didn't complete all exercises" message:@"Are you sure that you want to complete this workout?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
     [alert show];
 }
 
@@ -129,7 +133,17 @@
     NSString *finallyDone = [doneArray componentsJoinedByString:@" "];
     
     
-    cell.textLabel.text = exerciseName;
+    NSString *completed = @" (Completed)";
+    NSString *completedExercise = [exerciseName stringByAppendingString:completed];
+    
+    if (exercise.exerciseCompleted) {
+        cell.textLabel.font = [UIFont systemFontOfSize:17];
+        cell.textLabel.text = completedExercise;
+    }
+    else {
+        cell.textLabel.text = exerciseName;
+    }
+    
     cell.detailTextLabel.text = finallyDone;
     
     cell.imageView.image = exercise.picture;

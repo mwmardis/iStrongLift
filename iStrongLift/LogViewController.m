@@ -86,7 +86,7 @@
     
     NSMutableArray *logV= [NSKeyedUnarchiver unarchiveObjectWithData:[self.defaults objectForKey:@"logs"]];
     self.logs = [[NSMutableArray alloc] initWithArray:logV];
-    [self printArray: self.logs];
+    //[self printArray: self.logs];
     
   //  NSSortDescriptor *dateSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
     

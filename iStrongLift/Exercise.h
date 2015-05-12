@@ -25,7 +25,8 @@
 
 -(id)initWithName:(NSString *)name targetSets:(NSInteger)targetSets targetReps:(NSInteger)targetReps picture:(NSString *)picture;
 
-
+- (void) encodeWithCoder : (NSCoder *)encode ;
+- (id) initWithCoder : (NSCoder *)decode;
 @end
 
 // variables for main exercise names

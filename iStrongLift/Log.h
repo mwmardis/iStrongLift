@@ -1,17 +1,18 @@
 //
-//  Set.h
+//  Log.h
 //  iStrongLift
 //
-//  Created by Michael Mardis on 5/6/15.
+//  Created by Juan Vasquez on 5/11/15.
 //  Copyright (c) 2015 CS378. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "Workout.h"
+@interface Log : NSObject
 
-@interface Set : NSObject
+-(id) initWithWorkout: (Workout*) workout;
+@property (nonatomic, strong)Workout *workout;
 
-@property (nonatomic, readwrite) NSInteger weight;
-@property (nonatomic, readwrite) NSInteger reps;
 - (void) encodeWithCoder : (NSCoder *)encode ;
 - (id) initWithCoder : (NSCoder *)decode;
 @end

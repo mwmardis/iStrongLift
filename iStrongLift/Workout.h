@@ -12,14 +12,15 @@
 
 
 // date
-@property (readwrite, assign) NSDate *date;
+@property (readwrite, strong, nonatomic) NSDate *date;
 
 // array of exercises
 @property (strong, nonatomic) NSMutableArray *exercises;
 
 // Name of workout
 @property (nonatomic, strong) NSString *name;
-
+- (void) encodeWithCoder : (NSCoder *)encode ;
+- (id) initWithCoder : (NSCoder *)decode;
 
 - (id)initStrongLiftA;
 - (id)initStrongLiftB;

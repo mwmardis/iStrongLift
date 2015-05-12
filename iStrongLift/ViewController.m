@@ -117,6 +117,10 @@
         WorkoutViewController *vc = (WorkoutViewController *)segue.destinationViewController;
         vc.workout = workout;
     }
+    else if([[segue identifier] isEqualToString:@"toLog"])
+    {
+        //[self performSegueWithIdentifier:@"toLog" sender: self];
+    }
     
     
     

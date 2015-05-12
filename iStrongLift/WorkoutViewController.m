@@ -8,6 +8,7 @@
 
 #import "WorkoutViewController.h"
 #import "Workout.h"
+#import "Log.h"
 #import "ExerciseViewController.h"
 #import "Set.h"
 @implementation WorkoutViewController
@@ -34,7 +35,8 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:self.workout.name forKey:PREVIOUS_WORKOUT_COMPLETED];
-
+    
+    
     // check to see if all of the exercises were completed
     for (int i = 0; i < self.workout.exercises.count; i++) {
         Exercise *exercise = [self.workout.exercises objectAtIndex:i];
@@ -50,10 +52,29 @@
         }
     }
     
+   
+    //add new log
+    //Log *newLog = [[Log alloc] initWithWorkout:self.workout];
+   
+    NSArray *logV= [NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"logs"]];
+    NSMutableArray *logs = [[NSMutableArray alloc] initWithArray:logV];
+    [logs insertObject:self.workout atIndex:0];
     
+
     
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:logs];
+    [defaults setObject:data forKey:@"logs"];
+
     
-    
+    UINavigationController *navigationController = self.navigationController;
+    [navigationController popViewControllerAnimated:YES];
+
+}
+
+-(void) printArray: (NSMutableArray*) arr
+{
+    for (id obj in arr)
+        NSLog(@"Object: %@", obj);
 }
 
 - (void)alertOKCancelAction {

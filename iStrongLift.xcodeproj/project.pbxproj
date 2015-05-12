@@ -23,6 +23,8 @@
 		2797CF581AFAA3C3000FB1B3 /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF571AFAA3C3000FB1B3 /* Exercise.m */; };
 		2797CF5B1AFADE40000FB1B3 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF5A1AFADE40000FB1B3 /* Set.m */; };
 		2797CF5E1AFAE406000FB1B3 /* WorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797CF5D1AFAE406000FB1B3 /* WorkoutViewController.m */; };
+		3CC855761B015CBC00BB7448 /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC855751B015CBC00BB7448 /* Log.m */; };
+		3CC855791B015D3400BB7448 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC855781B015D3400BB7448 /* LogViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,10 @@
 		2797CF5A1AFADE40000FB1B3 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Set.m; sourceTree = "<group>"; };
 		2797CF5C1AFAE406000FB1B3 /* WorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutViewController.h; sourceTree = "<group>"; };
 		2797CF5D1AFAE406000FB1B3 /* WorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutViewController.m; sourceTree = "<group>"; };
+		3CC855751B015CBC00BB7448 /* Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Log.m; sourceTree = "<group>"; };
+		3CC855771B015CC600BB7448 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		3CC855781B015D3400BB7448 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
+		3CC8557A1B015D4200BB7448 /* LogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogViewController.h; path = ../LogViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,8 @@
 				275CCBFC1AFB3B0C00C92955 /* ExerciseViewController.m */,
 				275CCBF81AFB38BF00C92955 /* TimerViewController.h */,
 				275CCBF91AFB38BF00C92955 /* TimerViewController.m */,
+				3CC8557A1B015D4200BB7448 /* LogViewController.h */,
+				3CC855781B015D3400BB7448 /* LogViewController.m */,
 				2797CF301AF9B14C000FB1B3 /* Main.storyboard */,
 				275CCC001AFC915300C92955 /* Iphone Sms Original.mp3 */,
 				2797CF521AF9C507000FB1B3 /* Model */,
@@ -158,6 +166,8 @@
 		2797CF521AF9C507000FB1B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3CC855751B015CBC00BB7448 /* Log.m */,
+				3CC855771B015CC600BB7448 /* Log.h */,
 				2797CF561AFAA3C3000FB1B3 /* Exercise.h */,
 				2797CF571AFAA3C3000FB1B3 /* Exercise.m */,
 				2797CF591AFADE40000FB1B3 /* Set.h */,
@@ -277,10 +287,12 @@
 				2797CF2C1AF9B14C000FB1B3 /* AppDelegate.m in Sources */,
 				2797CF291AF9B14C000FB1B3 /* main.m in Sources */,
 				2797CF5B1AFADE40000FB1B3 /* Set.m in Sources */,
+				3CC855761B015CBC00BB7448 /* Log.m in Sources */,
 				2797CF4E1AF9BFDF000FB1B3 /* SettingsViewController.m in Sources */,
 				2797CF581AFAA3C3000FB1B3 /* Exercise.m in Sources */,
 				2797CF551AFAA0F0000FB1B3 /* Workout.m in Sources */,
 				275CCBFD1AFB3B0C00C92955 /* ExerciseViewController.m in Sources */,
+				3CC855791B015D3400BB7448 /* LogViewController.m in Sources */,
 				2797CF5E1AFAE406000FB1B3 /* WorkoutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

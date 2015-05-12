@@ -9,5 +9,23 @@
 #import "Set.h"
 
 @implementation Set
+- (void) encodeWithCoder : (NSCoder *)coder
+{
+    
+    [coder encodeInteger: self.reps forKey:@"reps"];
+    [coder encodeInteger: self.weight forKey:@"weight"];
 
+    
+    
+}
+- (id) initWithCoder : (NSCoder *)coder
+{
+    self = [super init];
+    if (self != nil)
+    {
+        self.reps = [coder decodeIntegerForKey:@"reps"];
+        self.weight = [coder decodeIntegerForKey:@"weight"];
+    }
+    return self;
+}
 @end

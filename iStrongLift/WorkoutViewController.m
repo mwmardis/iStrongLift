@@ -47,6 +47,14 @@
         
         // if none of the exercises are incomplete
         if (i == self.workout.exercises.count - 1) {
+            NSArray *logV= [NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"logs"]];
+            NSMutableArray *logs = [[NSMutableArray alloc] initWithArray:logV];
+            [logs insertObject:self.workout atIndex:0];
+            
+            
+            
+            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:logs];
+            [defaults setObject:data forKey:@"logs"];
             UINavigationController *navigationController = self.navigationController;
             [navigationController popViewControllerAnimated:YES];
         }
@@ -56,6 +64,7 @@
     //add new log
     //Log *newLog = [[Log alloc] initWithWorkout:self.workout];
    
+    /*
     NSArray *logV= [NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"logs"]];
     NSMutableArray *logs = [[NSMutableArray alloc] initWithArray:logV];
     [logs insertObject:self.workout atIndex:0];
@@ -64,10 +73,8 @@
     
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:logs];
     [defaults setObject:data forKey:@"logs"];
+     */
 
-    
-    UINavigationController *navigationController = self.navigationController;
-    [navigationController popViewControllerAnimated:YES];
 
 }
 
@@ -84,6 +91,16 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSArray *logV= [NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"logs"]];
+        NSMutableArray *logs = [[NSMutableArray alloc] initWithArray:logV];
+        [logs insertObject:self.workout atIndex:0];
+        
+        
+        
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:logs];
+        [defaults setObject:data forKey:@"logs"];
+        
         UINavigationController *navigationController = self.navigationController;
         [navigationController popViewControllerAnimated:YES];
     }

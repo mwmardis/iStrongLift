@@ -10,6 +10,14 @@
 #import "Exercise.h"
 @implementation Workout
 
+-(NSDate*) date
+{
+    if(!_date)
+    {
+        _date = [NSDate date];
+    }
+    return _date;
+}
 
 // constructors for stronglift A workout
 - (id)initStrongLiftA {
@@ -74,6 +82,25 @@
         
     }
     return self;
+}
+
+- (void) encodeWithCoder : (NSCoder *)coder
+{
+   
+    [coder encodeObject:self.exercises forKey:@"exercises"];
+     [coder encodeObject:self.date forKey:@"date"];
+
+}
+- (id) initWithCoder : (NSCoder *)coder
+{
+    self = [super init];
+    if (self != nil)
+    {
+        self.date = [coder decodeObjectForKey:@"date"];
+        self.exercises = [coder decodeObjectForKey:@"exercises"];
+    }
+    return self;
+    
 }
 
 

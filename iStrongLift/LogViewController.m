@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LogViewController.h"
+#import "Workout.h"
 @interface LogViewController ()
 @property (nonatomic, strong)NSUserDefaults *defaults;
 @property (nonatomic, strong)NSMutableArray *logs;
@@ -37,9 +38,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSString *CellIdentifier = @"";
+    Workout *currWorkout = [self.logs objectAtIndex:indexPath.row];
+    
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSString *stringFromDate = [formatter stringFromDate: currWorkout.date];
+    
+    
+   // NSLog(@"Date : %@", stringFromDate);
+    NSString *CellIdentifier = @"log_cell";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        return cell;
+    cell.textLabel.text = stringFromDate;
+    return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -51,7 +63,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return 20;
+    return self.logs.count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -72,16 +84,24 @@
 -(void) viewDidLoad
 {
     
-    NSSortDescriptor *dateSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *logs = [[NSMutableArray alloc] initWithArray:[defaults objectForKey:@"logs"]];
-    logs = [logs sortedArrayUsingDescriptors:@[dateSortDescriptor]];
-    self.tableView.delegate = self;
+    NSMutableArray *logV= [NSKeyedUnarchiver unarchiveObjectWithData:[self.defaults objectForKey:@"logs"]];
+    self.logs = [[NSMutableArray alloc] initWithArray:logV];
+    [self printArray: self.logs];
     
+  //  NSSortDescriptor *dateSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
+    
+ //   NSMutableArray *logs = [[NSMutableArray alloc] initWithArray:[self.defaults objectForKey:@"logs"]];
+    //logs = [logs sortedArrayUsingDescriptors:@[dateSortDescriptor]];
+    self.tableView.delegate = self;
     
 
     
-    
+}
+
+-(void) printArray: (NSMutableArray*) arr
+{
+    for (id obj in arr)
+        NSLog(@"Object: %@", obj);
 }
 
 @end

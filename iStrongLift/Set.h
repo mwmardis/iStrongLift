@@ -12,5 +12,6 @@
 
 @property (nonatomic, readwrite) NSInteger weight;
 @property (nonatomic, readwrite) NSInteger reps;
-
+- (void) encodeWithCoder : (NSCoder *)encode ;
+- (id) initWithCoder : (NSCoder *)decode;
 @end

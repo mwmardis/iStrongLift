@@ -31,17 +31,46 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:self.workout.name forKey:PREVIOUS_WORKOUT_COMPLETED];
-    self.workout.date = [NSDate date];
     
+    
+    // check to see if all of the exercises were completed
+    for (int i = 0; i < self.workout.exercises.count; i++) {
+        Exercise *exercise = [self.workout.exercises objectAtIndex:i];
+        if (!exercise.exerciseCompleted) {
+            [self alertOKCancelAction];
+            break;
+        }
+        
+        // if none of the exercises are incomplete
+        if (i == self.workout.exercises.count - 1) {
+            UINavigationController *navigationController = self.navigationController;
+            [navigationController popViewControllerAnimated:YES];
+        }
+    }
+    
+   
     //add new log
-    Log *newLog = [[Log alloc] initWithWorkout:self.workout];
-    NSMutableArray *logs = [[NSMutableArray alloc] initWithArray:[defaults objectForKey:@"logs"]];
-    [logs insertObject:newLog atIndex:0];
-    [defaults setObject:logs forKey:@"logs"];
+    //Log *newLog = [[Log alloc] initWithWorkout:self.workout];
+   
+    NSArray *logV= [NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"logs"]];
+    NSMutableArray *logs = [[NSMutableArray alloc] initWithArray:logV];
+    [logs insertObject:self.workout atIndex:0];
+    
+
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:logs];
+    [defaults setObject:data forKey:@"logs"];
+
     
     UINavigationController *navigationController = self.navigationController;
     [navigationController popViewControllerAnimated:YES];
-    
+
+}
+
+-(void) printArray: (NSMutableArray*) arr
+{
+    for (id obj in arr)
+        NSLog(@"Object: %@", obj);
 }
 
 - (void)alertOKCancelAction {

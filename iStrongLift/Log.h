@@ -12,4 +12,7 @@
 
 -(id) initWithWorkout: (Workout*) workout;
 @property (nonatomic, strong)Workout *workout;
+
+- (void) encodeWithCoder : (NSCoder *)encode ;
+- (id) initWithCoder : (NSCoder *)decode;
 @end

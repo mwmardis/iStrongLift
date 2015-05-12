@@ -18,4 +18,22 @@
     }
     return self;
 }
+
+- (void)encodeWithCoder:(NSCoder *)coder;
+{
+    [coder encodeObject:self.workout forKey:@"workout"];
+    
+}
+
+- (id)initWithCoder:(NSCoder *)coder;
+{
+    self = [super init];
+    if (self != nil)
+    {
+        self.workout = [coder decodeObjectForKey:@"workout"];
+       
+    }
+    return self;
+}
+
 @end

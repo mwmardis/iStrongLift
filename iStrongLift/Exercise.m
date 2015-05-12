@@ -26,4 +26,24 @@
     return self;
 }
 
+- (void) encodeWithCoder : (NSCoder *)coder
+{
+    
+    [coder encodeObject:self.sets forKey:@"sets"];
+    
+    
+}
+- (id) initWithCoder : (NSCoder *)coder
+{
+    self = [super init];
+    if (self != nil)
+    {
+        self.sets = [coder decodeObjectForKey:@"sets"];
+        
+    }
+    return self;
+    
+}
+
+
 @end
